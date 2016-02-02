@@ -1,7 +1,8 @@
 ###
-	FlexNav.js 1.3.3
+	FlexNav.js 2.0
 
 	Created by Jason Weaver http://jasonweaver.name
+    Edited by Sarah DaSilva http://superpoweredweb.com
 	Released under http://unlicense.org/
 
 //
@@ -15,7 +16,7 @@ $.fn.flexNav = (options) ->
     'animationSpeed': 250,
     'transitionOpacity': true,
     'buttonSelector': '.menu-button',
-    'hoverIntent': false,
+    'hoverIntent': true,
     'hoverIntentTimeout': 150,
     'calcItemWidths': false,
     'hover': true
@@ -37,10 +38,10 @@ $.fn.flexNav = (options) ->
     count = $top_nav_items.length
     nav_width = 100 / count
     nav_percent = nav_width+"%"
-  
+
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
-	
+
   # Functions for hover support
   showMenu = ->
     if $nav.hasClass('lg-screen') is true and settings.hover is true
@@ -110,7 +111,7 @@ $.fn.flexNav = (options) ->
         )
       else if settings.hoverIntent is false
         $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu)
-	
+
   # Set navigation element for this instantiation
   $(settings['buttonSelector']).data('navEl', $nav)
 
@@ -129,7 +130,7 @@ $.fn.flexNav = (options) ->
     $thisNav = $btnParent.data('navEl')
     $thisNav.toggleClass('flexnav-show')
   )
-				
+
   # Toggle for sub-menus
   $('.touch-button').on('click', (e) ->
     $sub = $(@).parent('.item-with-ul').find('>ul')
@@ -145,7 +146,7 @@ $.fn.flexNav = (options) ->
       $sub.addClass('flexnav-show').slideDown(settings.animationSpeed)
       $touchButton.addClass('active')
   )
-	
+
   # Sub ul's should have a class of 'open' if an element has focus
   $nav.find('.item-with-ul *').focus ->
     # remove class of open from all elements that are not focused

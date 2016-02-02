@@ -19,7 +19,7 @@
       'animationSpeed': 250,
       'transitionOpacity': true,
       'buttonSelector': '.menu-button',
-      'hoverIntent': false,
+      'hoverIntent': true,
       'hoverIntentTimeout': 150,
       'calcItemWidths': false,
       'hover': true

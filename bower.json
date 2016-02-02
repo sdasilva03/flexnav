@@ -1,6 +1,6 @@
 {
   "name": "flexnav",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "homepage": "http://jasonweaver.name/lab/flexiblenavigation/",
   "description": "A jQuery plugin for responsive menus",
   "keywords": [
@@ -11,7 +11,8 @@
     "flexnav"
   ],
   "authors": [
-    "Jason Weaver"
+    "Jason Weaver",
+    "Sarah DaSilva"
   ],
   "license": "Unlicense",
   "ignore": [
